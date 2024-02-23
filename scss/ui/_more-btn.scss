@@ -1,0 +1,41 @@
+.more-btn {
+  cursor: pointer;
+  width: fit-content;
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  color: $color-white;
+  font-size: $font-size-200;
+  font-weight: $font-weight-300;
+}
+
+@mixin more-btn--default {
+  @extend .more-btn;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: border 0.25s ease-in-out;
+
+  &:hover {
+    border: 1px solid rgba(255, 255, 255, 1);
+  }
+
+  @include mobile {
+    padding: 0.75rem 1rem;
+    font-size: $font-size-100;
+  }
+}
+
+@mixin more-btn--yellow {
+  @extend .more-btn;
+  background-color: $color-yellow;
+  border: 0;
+  border-radius: 0.5rem;
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  @include mobile {
+    padding: 0.75rem 1rem;
+    font-size: $font-size-100;
+  }
+}
