@@ -1,0 +1,24 @@
+@mixin close-btn {
+  cursor: pointer;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  background: none;
+  padding: 0.5rem;
+
+  .close-btn__bar {
+    width: 30px;
+    height: 2px;
+    background-color: $color-black;
+    margin: 6px 0;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .bar--left {
+    transform: translate(0, 4px) rotate(-45deg);
+  }
+
+  .bar--right {
+    transform: translate(0, -4px) rotate(45deg);
+  }
+}
