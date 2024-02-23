@@ -1,0 +1,20 @@
+.heading-text.heading--faq {
+  background-color: $color-light-yellow;
+}
+
+.heading-text-container {
+  @include heading-container;
+  text-align: center;
+
+  .heading-text__title {
+    @include heading-title;
+    padding: 0 1rem;
+    word-wrap: break-word;
+  }
+
+  .heading-text__intro {
+    @include heading-intro-p;
+    padding: 0 1rem;
+    word-wrap: break-word;
+  }
+}
