@@ -1,0 +1,33 @@
+@mixin hover-line-effect {
+  width: fit-content;
+  transition: all 0.3s ease;
+
+  &:hover {
+    .link-wrapper::after {
+      transform: scaleX(1);
+    }
+  }
+
+  .link-wrapper {
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 2px;
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      background-color: $color-yellow;
+      transform: scaleX(0);
+      transform-origin: 0 0;
+      transition: transform 0.35s cubic-bezier(0.52, 0.01, 0.16, 1);
+    }
+
+    .link {
+      @include text-desc-p;
+    }
+  }
+}
