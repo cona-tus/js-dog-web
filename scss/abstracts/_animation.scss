@@ -1,0 +1,52 @@
+// heading
+.heading-text-container {
+  &[data-scroll] {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  &[data-scroll='in'] {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &[data-scroll='out'] {
+    opacity: 0;
+  }
+}
+
+// team
+.team-text__subtitle {
+  &[data-scroll] {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  &[data-scroll='in'] {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &[data-scroll='out'] {
+    opacity: 0;
+  }
+}
+
+.team-text__desc {
+  &[data-scroll] {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 1.5s 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  &[data-scroll='in'] {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &[data-scroll='out'] {
+    opacity: 0;
+  }
+}
