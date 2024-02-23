@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: $color-white;
+  webkit-font-smoothing: antialiased;
+  font-family: 'Roboto', sans-serif;
+  // font-family: "Raleway", sans-serif;
+  font-weight: $font-weight-300;
+  overflow-x: hidden;
+
+  &.full-screen--open {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .skip-link {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    top: -10000em;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+
+    &:focus {
+      @include nav-title;
+      width: auto;
+      height: auto;
+      display: block;
+      top: 1rem;
+      left: 1rem;
+      padding: 1rem 1.5rem;
+      color: $color-black;
+      background-color: $color-white;
+      border: 0.5rem;
+      box-shadow: $box-shadow-100;
+      clip: auto !important;
+      clip-path: none;
+      z-index: 9999;
+      animation: slide-in 0.5 s ease-in-out forwards;
+    }
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-50px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
