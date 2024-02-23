@@ -1,0 +1,185 @@
+// .header-menu-item__title, skip-link
+@mixin nav-title {
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  font-size: $font-size-300;
+  font-weight: $font-weight-300;
+
+  @include desktop {
+    font-size: $font-size-200;
+  }
+}
+
+// .heading-text-container
+@mixin heading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 8rem;
+  padding-bottom: 3rem;
+}
+
+// .heading-text__title, .full-screen-menu-item__title, .team-text__subtitle,  .side-text__title
+@mixin heading-title {
+  color: $color-black;
+  font-family: 'Raleway', sans-serif;
+  font-size: $font-size-500;
+  font-weight: $font-weight-700;
+  line-height: 2.5rem;
+  letter-spacing: 1.1px;
+  word-spacing: 2px;
+
+  @include tablet {
+    font-size: $font-size-450;
+    line-height: 2.2rem;
+  }
+
+  @include mobile {
+    font-size: $font-size-400;
+    line-height: 1.6rem;
+  }
+}
+
+// slideshow-swiper-slide-text__title
+@mixin heading-big-title-h2 {
+  color: $color-white;
+  font-family: 'Raleway', sans-serif;
+  font-size: $font-size-700;
+  font-weight: $font-weight-500;
+  line-height: 4rem;
+  letter-spacing: 1.1px;
+  word-spacing: 2px;
+
+  @include tablet-wide {
+    font-size: $font-size-600;
+  }
+
+  @include tablet {
+    font-size: $font-size-550;
+    line-height: 3rem;
+  }
+
+  @include mobile-wide {
+    font-size: $font-size-500;
+    line-height: 2rem;
+  }
+
+  @include mobile {
+    font-size: $font-size-450;
+  }
+}
+
+// section-title(team-text__title, .rates__title)
+@mixin heading-small-title-h2 {
+  color: $color-gray-300;
+  font-size: $font-size-200;
+  font-weight: $font-weight-300;
+  letter-spacing: 0.85px;
+}
+
+// .about-item-text__title, .rates-text__subtitle
+@mixin heading-subtitle-h3 {
+  font-size: $font-size-400;
+  font-weight: $font-weight-400;
+  letter-spacing: 1.1px;
+}
+
+// .client-item__title, .faq-accordion-item__question, .footer-grid-column__title
+@mixin heading-text-h4 {
+  font-size: $font-size-400;
+  font-weight: $font-weight-500;
+  letter-spacing: 1.1px;
+  line-height: 2rem;
+
+  @include tablet-wide {
+    font-size: $font-size-300;
+    line-height: 1.6rem;
+  }
+}
+
+// .heading-text__intro
+@mixin heading-intro-p {
+  color: $color-gray-400;
+  font-size: $font-size-200;
+  font-weight: $font-weight-300;
+  line-height: 1.4rem;
+  letter-spacing: 0.85px;
+  text-align: center;
+
+  @include mobile {
+    font-size: $font-size-100;
+    line-height: 1rem;
+  }
+}
+
+// .slideshow-swiper-slide-text__desc, .team-text__desc, .side-text__desc
+@mixin text-big-p {
+  font-size: $font-size-300;
+  font-weight: $font-weight-300;
+  line-height: 1.8rem;
+  letter-spacing: 1.1px;
+
+  @include mobile {
+    font-size: $font-size-200;
+    line-height: 1.5rem;
+  }
+}
+
+// slideshow-aside-item__text
+@mixin text-mid-p {
+  color: $color-gray-400;
+  font-size: $font-size-200;
+  letter-spacing: 0.5px;
+  word-spacing: 2.5px;
+
+  @include tablet-wide {
+    font-size: $font-size-100;
+    line-height: 1rem;
+  }
+
+  @include mobile-wide {
+    font-size: $font-size-50;
+  }
+}
+
+// .rates-item__content, .testimonial-swiper-slide__username
+@mixin text-small-p {
+  color: $color-gray-300;
+  font-size: $font-size-100;
+  font-weight: $font-weight-300;
+  letter-spacing: 1.1px;
+}
+
+// .client-item__count
+@mixin text-big-strong {
+  font-family: 'Raleway', sans-serif;
+  font-size: $font-size-600;
+  font-weight: $font-weight-500;
+}
+
+// .ad__text, .rates-text__cost
+@mixin text-mid-strong {
+  font-family: 'Raleway', sans-serif;
+  font-size: $font-size-500;
+  font-weight: $font-weight-500;
+  letter-spacing: 1.1px;
+  line-height: 2rem;
+
+  @include tablet {
+    font-size: $font-size-450;
+  }
+}
+
+// .link, .about-item-text__desc, .client-item__desc, .testimonial-swiper-slide__comment, .faq-accordion-item__answer, .faq-contact-text, .faq-contact-btn, .footer-grid-column__desc, .footer__copyrights
+@mixin text-desc-p {
+  font-size: $font-size-200;
+  font-weight: $font-weight-300;
+  letter-spacing: 0.85px;
+  line-height: 1.6rem;
+
+  @include mobile {
+    font-size: $font-size-100;
+    line-height: 1.2rem;
+  }
+}
