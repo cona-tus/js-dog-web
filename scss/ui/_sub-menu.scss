@@ -1,0 +1,35 @@
+.sub-menu {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+
+  .sub-menu-open-btn {
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    background: none;
+
+    &:focus {
+      outline: auto;
+    }
+
+    .sub-menu-open-btn__bar {
+      width: 50px;
+      height: 2px;
+      background-color: $color-white;
+      margin: 6px 0;
+      transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    &:hover {
+      .bar--left {
+        width: 40px;
+      }
+
+      .bar--right {
+        width: 30px;
+      }
+    }
+  }
+}
