@@ -1,0 +1,19 @@
+.ad {
+  width: 100%;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../asset/images/doggy-ad.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 2rem;
+
+  .ad__text {
+    @include text-mid-strong;
+    color: $color-white;
+    text-align: center;
+  }
+}
