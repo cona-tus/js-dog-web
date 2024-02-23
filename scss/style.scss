@@ -1,0 +1,36 @@
+// font
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+// abstracts
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+@import 'abstracts/animation';
+
+// base
+@import 'base/reset';
+@import 'base/base';
+
+// components
+@import 'components/slideshow';
+@import 'components/aside';
+@import 'components/heading';
+@import 'components/about';
+@import 'components/team';
+@import 'components/client';
+@import 'components/ad';
+@import 'components/fee';
+@import 'components/testimonials';
+@import 'components/faq';
+@import 'components/scroll-to-top';
+
+// layout
+@import 'layout/header';
+@import 'layout/mobile-header';
+@import 'layout/full-screen';
+@import 'layout/sidebar';
+@import 'layout/main';
+@import 'layout/footer';
+
+// ui
+@import 'ui/cursor';
+@import 'ui/sub-menu';
