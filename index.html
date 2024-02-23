@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0 maximum-scale=1.0; minimum-scale=1.0; user-scalable=no;">
+    <!-- og tag -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/page.html">
+    <meta property="og:title" content="Doggy">
+    <meta property="og:image" content="./asset/images/doggy-og.jpg">
+    <meta property="og:description" content="Dog care service">
+    <meta property="og:site_name" content="Doggy">
+    <meta property="og:locale" content="ko_KR">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/ico" href="./asset/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://kit.fontawesome.com/5c9cf55bcf.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="./src/swiper.js" defer></script>
+    <script src="./src/main.js" defer></script>
+    <title>Doggy</title>
+</head>
+
+<body class="body">
+    <!-- skip menu -->
+    <a class="skip-link" href="#page-content">Skip to the content</a>
+    <!-- default-header -->
+    <header class="default-header">
+        <div class="default-header-inner">
+            <div class="default-header-logo">
+                <a href="/" class="default-header-logo__link">
+                    <img src="./asset/images/doggy-logo.png" alt="Doggy logo" />
+                </a>
+            </div>
+            <nav class="header-nav">
+                <ul class="header-menu">
+                    <li class="header-menu-item">
+                        <span class="header-menu-item__title">
+                            <a href="/" class="header-menu-item__link">Home</a>
+                        </span>
+                    </li>
+                    <li class="header-menu-item">
+                        <span class="header-menu-item__title">
+                            <a href="/" class="header-menu-item__link" onclick="JavaScript: return false;">About</a>
+                        </span>
+                        <ul class="header-dropdown">
+                            <li class="header-dropdown-item">
+                                <span class="header-dropdown__link-wrapper link-wrapper">
+                                    <a href="#" class="header-dropdown__link link">Our Service</a>
+                                </span>
+                            </li>
+                            <li class="header-dropdown-item">
+                                <span class="header-dropdown__link-wrapper link-wrapper">
+                                    <a href="#" class="header-dropdown__link link">Our Team</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header-menu-item">
+                        <span class="header-menu-item__title">
+                            <a href="/" class="header-menu-item__link"
+                                onclick="JavaScript: return false;">Membership</a>
+                        </span>
+                        <ul class="header-dropdown">
+                            <li class="header-dropdown-item">
+                                <span class="header-dropdown__link-wrapper link-wrapper">
+                                    <a href="#" class="header-dropdown__link link">Free plan</a>
+                                </span>
+                            </li>
+                            <li class="header-dropdown-item">
+                                <span class="header-dropdown__link-wrapper link-wrapper">
+                                    <a href="#" class="header-dropdown__link link">Simple plan</a>
+                                </span>
+                            </li>
+                            <li class="header-dropdown-item">
+                                <span class="header-dropdown__link-wrapper  link-wrapper">
+                                    <a href="#" class="header-dropdown__link link">Premium plan</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header-menu-item">
+                        <span class="header-menu-item__title">
+                            <a href="/" class="header-menu-item__link" onclick="JavaScript: return false;">Community</a>
+                        </span>
+                        <ul class="header-dropdown">
+                            <li class="header-dropdown-item">
+                                <span class="header-dropdown__link-wrapper link-wrapper">
+                                    <a href="#" class="header-dropdown__link link">Notice</a>
+                                </span>
+                            </li>
+                            <li class="header-dropdown-item">
+                                <span class="header-dropdown__link-wrapper link-wrapper">
+                                    <a href="#" class="header-dropdown__link link">FAQ</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header-menu-item">
+                        <span class="header-menu-item__title">
+                            <a href="#" class="header-menu-item__link">Booking</a>
+                        </span>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sub-menu">
+                <button type="button" class="sub-menu-open-btn">
+                    <div class="sub-menu-open-btn__bar bar--left"></div>
+                    <div class="sub-menu-open-btn__bar bar--right"></div>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- mobile-header -->
+    <header class="mobile-header mobile--close">
+        <div class="mobile-header-inner">
+            <button type="button" class="mobile-close-btn">
+                <div class="close-btn__bar bar--left"></div>
+                <div class="close-btn__bar bar--right"></div>
+            </button>
+        </div>
+    </header>
+    <!-- full-screen -->
+    <div class="full-screen">
+        <div class="full-screen-bg"></div>
+        <div class="full-screen-inner">
+            <nav class="full-screen-nav">
+                <ul class="full-screen-menu">
+                    <li class="full-screen-menu-item">
+                        <span class="full-screen-menu-item__title">
+                            <a href="/" class="full-screen-menu-item__link">Home</a>
+                        </span>
+                    </li>
+                    <li class="full-screen-menu-item">
+                        <span class="full-screen-menu-item__title full-screen--drop">
+                            <a href="/" class="full-screen-menu-item__link"
+                                onclick="JavaScript: return false;">About</a>
+                        </span>
+                        <ul class="full-screen-dropdown">
+                            <li class="full-screen-dropdown-item">
+                                <span class="full-screen-dropdown__link-wrapper link-wrapper">
+                                    <a href="#" class="full-screen-dropdown__link link">Our Service</a>
+                                </span>
+                            </li>
+                            <li class="full-screen-dropdown-item">
+                                <span class="full-screen-dropdown__link-wrapper link-wrapper">
+                                    <a href="#" class="full-screen-dropdown__link link">Our Team</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="full-screen-menu-item">
+                        <span class="full-screen-menu-item__title full-screen--drop">
+                            <a href="/" class="full-screen-menu-item__link"
+                                onclick="JavaScript: return false;">Membership</a>
+                        </span>
+                        <ul class="full-screen-dropdown">
+                            <li class="full-screen-dropdown-item">
+                                <span class="full-screen-dropdown__link-wrapper link-wrapper">
+                                    <a href="#" class="full-screen-dropdown__link link">Free plan</a>
+                                </span>
+                            </li>
+                            <li class="full-screen-dropdown-item">
+                                <span class="full-screen-dropdown__link-wrapper link-wrapper">
+                                    <a href="#" class="full-screen-dropdown__link link">Simple plan</a>
+                                </span>
+                            </li>
+                            <li class="full-screen-dropdown-item">
+                                <span class="full-screen-dropdown__link-wrapper link-wrapper">
+                                    <a href="#" class="full-screen-dropdown__link link">Premium plan</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="full-screen-menu-item">
+                        <span class="full-screen-menu-item__title full-screen--drop">
+                            <a href="/" class="full-screen-menu-item__link"
+                                onclick="JavaScript: return false;">Community</a>
+                        </span>
+                        <ul class="full-screen-dropdown">
+                            <li class="full-screen-dropdown-item">
+                                <span class="full-screen-dropdown__link-wrapper link-wrapper">
+                                    <a href="#" class="full-screen-dropdown__link link">Notice</a>
+                                </span>
+                            </li>
+                            <li class="full-screen-dropdown-item">
+                                <span class="full-screen-dropdown__link-wrapper link-wrapper">
+                                    <a href="#" class="full-screen-dropdown__link link">FAQ</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="full-screen-menu-item">
+                        <span class="full-screen-menu-item__title">
+                            <a href="#" class="full-screen-menu-item__link">Booking</a>
+                        </span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- main -->
+    <main class="main" id="page-content">
+        <!-- slide-show -->
+        <section class="slideshow">
+            <div class="swiper slideshow-swiper">
+                <div class="slideshow-swiper-wrapper swiper-wrapper">
+                    <div class="slideshow-swiper-slide swiper-slide">
+                        <img src="./asset/images/doggy-slide01.jpg" alt="Licking dog" />
+                        <div class="slideshow-swiper-slide-text-wrapper">
+                            <div class="slideshow-swiper-slide-text">
+                                <h2 class="slideshow-swiper-slide-text__title">
+                                    <span>
+                                        We take care of
+                                    </span>
+                                    <span>
+                                        your dog.
+                                    </span>
+                                </h2>
+                                <p class="slideshow-swiper-slide-text__desc">
+                                    <span>
+                                        Are you busy? Don't worry.
+                                    </span>
+                                    <span>
+                                        We'll take care of your dog.
+                                    </span>
+                                    <span>
+                                        From baths to brushing, just
+                                        leave it to us.
+                                    </span>
+                                </p>
+                                <a class="slideshow-swiper-slide-text__btn" href="#">About us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slideshow-swiper-slide swiper-slide">
+                        <img src="./asset/images/doggy-slide02.jpg" alt="Smiling dog" />
+                        <div class="slideshow-swiper-slide-text-wrapper">
+                            <div class="slideshow-swiper-slide-text">
+                                <h2 class="slideshow-swiper-slide-text__title">
+                                    <span>Always there for</span>
+                                    <span>your dog.</span>
+                                </h2>
+                                <p class="slideshow-swiper-slide-text__desc">
+                                    <span>
+                                        We pursue the well-being and happiness of dogs.
+                                    </span>
+                                    <span>
+                                        We share joy with your dog. We'll make your dog happy.
+                                    </span>
+                                </p>
+                                <a class="slideshow-swiper-slide-text__btn" href="#">About us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slideshow-swiper-slide swiper-slide">
+                        <img src="./asset/images/doggy-slide03.jpg" alt="Looking back dog" />
+                        <div class="slideshow-swiper-slide-text-wrapper">
+                            <div class="slideshow-swiper-slide-text">
+                                <h2 class="slideshow-swiper-slide-text__title">
+                                    <span>We can be friends
+                                    </span>
+                                    <span>with your dog.
+                                    </span>
+                                </h2>
+                                <p class="slideshow-swiper-slide-text__desc">
+                                    <span>
+                                        Is your dog feeling lonely?
+                                    </span>
+                                    <span>
+                                        We'll be their friend! Play and walks, both with us!
+                                    </span>
+                                </p>
+                                <a class="slideshow-swiper-slide-text__btn" href="#">About us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slideshow-swiper-btn--next swiper-button-next slideshow"></div>
+                <div class="slideshow-swiper-btn--prev swiper-button-prev slideshow"></div>
+            </div>
+        </section>
+        <!-- aside -->
+        <aside class="aside">
+            <ul class="aside-container">
+                <li class="aside-item">
+                    <span class="aside-item__icon">
+                        <i class="fas fa-solid fa-check"></i>
+                    </span>
+                    <p class="aside-item__text">Trained <span class="aside-item__text--hidden">
+                            pet sitters
+                        </span></p>
+                </li>
+                <li class="aside-item">
+                    <span class="aside-item__icon">
+                        <i class="fas fa-solid fa-star"></i>
+                    </span>
+                    <p class="aside-item__text">Professional <span class="aside-item__text--hidden">nutritionists</span>
+                    </p>
+                </li>
+                <li class="aside-item">
+                    <span class="aside-item__icon">
+                        <i class="fas fa-solid fa-leaf"></i>
+                    </span>
+                    <p class="aside-item__text">Eco-friendly <span class="aside-item__text--hidden">products</span></p>
+                </li>
+                <li class="aside-item">
+                    <span class="aside-item__icon">
+                        <i class="fas fa-solid fa-thumbs-up"></i>
+                    </span>
+                    <p class="aside-item__text">Trusted <span class="aside-item__text--hidden">choices</span></p>
+                </li>
+            </ul>
+        </aside>
+        <!-- about -->
+        <section class="heading-text">
+            <article class="heading-text-container" data-scroll>
+                <h2 class="heading-text__title">Hire a
+                    reliable professional. <br />Everything your dog needs is here.</h2>
+                <p class="heading-text__intro">We're here to provide you with various
+                    forms
+                    of assistance.</p>
+            </article>
+        </section>
+        <section class="about">
+            <ul class="about-container">
+                <li class="about-item">
+                    <div class="about-item__img">
+                        <img src="./asset/images/doggy-service01.jpg" alt="Smiling dog" />
+                    </div>
+                    <article class="about-item-text">
+                        <h3 class="about-item-text__title">Walking</h3>
+                        <p class="about-item-text__desc">We walk your dog as many times as you want.
+                        </p>
+                    </article>
+                </li>
+                <li class="about-item">
+                    <div class="about-item__img">
+                        <img src="./asset/images/doggy-service02.jpg" alt="Dog with food" />
+                    </div>
+                    <article class="about-item-text">
+                        <h3 class="about-item-text__title">Feeding</h3>
+                        <p class="about-item-text__desc">We provide a balanced diet for your dog.</p>
+                    </article>
+                </li>
+                <li class="about-item">
+                    <div class="about-item__img">
+                        <img src="./asset/images/doggy-service03.jpg" alt="Dog in the bathtub" />
+                    </div>
+                    <article class="about-item-text">
+                        <h3 class="about-item-text__title">Grooming</h3>
+                        <p class="about-item-text__desc">We give your dog a bath and
+                            brush their fur.
+                        </p>
+                    </article>
+                </li>
+            </ul>
+        </section>
+        <!-- team -->
+        <section class="team">
+            <div class="team-inner">
+                <div class="team-text">
+                    <h2 class="team-text__title">
+                        <span class="team-text__icon section-title__icon">
+                            <i class="fas fa-solid fa-check"></i></span>
+                        Meet Our Team
+                    </h2>
+                    <p class="team-text__subtitle" data-scroll>
+                        We are trained professionals. What we do for you is with so much love for your dog.</p>
+                    <p class="team-text__desc" data-scroll>Our team will love your dog like we love our own! You can
+                        trust us
+                        with
+                        your dog.</p>
+                    <a class="team-text__btn" href="#">View our team</a>
+                </div>
+            </div>
+            <div class="team-img">
+                <img src="./asset/images/doggy-team.jpg" alt="Smiling woman with dog" />
+                <span class="team-img__svg" data-scroll>
+                    <svg id="visual" viewBox="0 0 900 900" width="900" height="900" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                        <g transform="translate(449.86956504389303 431.07504782812566)">
+                            <path
+                                d="M234.4 -220.3C304.7 -164 363.4 -82 370.5 7.2C377.7 96.4 333.5 192.8 263.1 258C192.8 323.1 96.4 357.1 -4.5 361.5C-105.4 366 -210.7 341.1 -277.1 275.9C-343.4 210.7 -370.7 105.4 -371 -0.4C-371.4 -106.1 -344.8 -212.1 -278.5 -268.4C-212.1 -324.6 -106.1 -331.1 -12 -319.1C82 -307 164 -276.6 234.4 -220.3"
+                                fill="none" stroke="#f9e09a" stroke-width="6"></path>
+                        </g>
+                    </svg>
+                </span>
+            </div>
+        </section>
+        <!-- client -->
+        <section class="heading-text">
+            <article class="heading-text-container" data-scroll>
+                <h2 class="heading-text__title">Many users are using Doggy.
+                </h2>
+                <p class="heading-text__intro">We delight in pleasing you.</p>
+            </article>
+        </section>
+        <section class="client">
+            <ul class="client-container">
+                <li class="client-item" data-scroll>
+                    <strong class="client-item__count">20k</strong>
+                    <h4 class="client-item__title">Services</h4>
+                    <p class="client-item__desc">Experience the best service.</p>
+                </li>
+                <li class="client-item" data-scroll>
+                    <strong class="client-item__count">10k</strong>
+                    <h4 class="client-item__title">Clients</h4>
+                    <p class="client-item__desc">Many users use Doggy.</p>
+                </li>
+                <li class="client-item" data-scroll>
+                    <strong class="client-item__count">100%</strong>
+                    <h4 class="client-item__title">Satisfaction</h4>
+                    <p class="client-item__desc">The satisfaction is excellent.</p>
+                </li>
+                <li class="client-item" data-scroll>
+                    <strong class="client-item__count">999+</strong>
+                    <h4 class="client-item__title">Reviews</h4>
+                    <p class="client-item__desc">Find various reviews.</p>
+                </li>
+            </ul>
+        </section>
+        <!-- ad -->
+        <div class="ad">
+            <strong class="ad__text">*12% discount when booking from the
+                website.</strong>
+        </div>
+        <!-- Fee -->
+        <section class="fee">
+            <div class="fee-img">
+                <img src="./asset/images/doggy-fee.jpg" alt="Dog's paws" />
+                <span class="fee-img__svg">
+                    <svg id="visual" viewBox="0 0 900 900" width="900" height="900" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                        <g transform="translate(418.00183779504187 449.91928319273086)">
+                            <path
+                                d="M254.3 -251.5C324.3 -184.3 372.2 -92.2 379.1 7C386.1 106.1 352.1 212.1 282.1 276.8C212.1 341.5 106.1 364.7 12.8 351.9C-80.4 339 -160.7 290.1 -219.7 225.4C-278.7 160.7 -316.4 80.4 -316 0.4C-315.6 -79.6 -277.1 -159.1 -218.1 -226.3C-159.1 -293.4 -79.6 -348.2 6.3 -354.5C92.2 -360.8 184.3 -318.7 254.3 -251.5"
+                                fill="none" stroke="#f9e09a" stroke-width="6"></path>
+                        </g>
+                    </svg>
+                </span>
+            </div>
+            <div class="fee-inner">
+                <h2 class="fee__title">
+                    <span class="fee__icon section-title__icon"><i class="fas fa-solid fa-check"></i></span>
+                    Dog Care fee
+                </h2>
+                <div class="fee-container">
+                    <div class="fee-column-wrapper">
+                        <div class="fee-column--left fee-column">
+                            <div class="fee-text">
+                                <h3 class="fee-text__subtitle">3 Days per week</h3>
+                                <strong class="fee-text__cost">$12</strong>
+                            </div>
+                            <ul class="fee-list">
+                                <li class="fee-item">
+                                    <p class="fee-item__content">
+                                        Feeding organic food
+                                    </p>
+                                </li>
+                                <li class="fee-item">
+                                    <p class="fee-item__content">
+                                        Dog waste pick up
+                                    </p>
+                                </li>
+                                <li class="fee-item">
+                                    <p class="fee-item__content">
+                                        30-40 minute walk or play time
+                                    </p>
+                                </li>
+                                <li class="fee-item">
+                                    <p class="fee-item__content">
+                                        Medication administration
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="fee-column--center fee-column">
+                            <div class="fee-text">
+                                <h3 class="fee-text__subtitle">5 Days per week</h3>
+                                <strong class="fee-text__cost">$16</strong>
+                            </div>
+                            <ul class="fee-list">
+                                <li class="fee-item">
+                                    <p class="fee-item__content">
+                                        organic food
+                                    </p>
+                                </li>
+                                <li class="fee-item">
+                                    <p class="fee-item__content">
+                                        Dog waste pick up
+                                    </p>
+                                </li>
+                                <li class="fee-item">
+                                    <p class="fee-item__content">
+                                        50-60+ minute walk or play time
+                                    </p>
+                                </li>
+                                <li class="fee-item">
+                                    <p class="fee-item__content">
+                                        Medication administration
+                                    </p>
+                                </li>
+                                <li class="fee-item">
+                                    <p class="fee-item__content">
+                                        Daily updates about your pet
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="fee-column--right fee-column">
+                            <div class="fee-text">
+                                <h3 class="fee-text__subtitle">4 Days per week</h3>
+                                <strong class="fee-text__cost">$14</strong>
+                            </div>
+                            <ul class="fee-list">
+                                <li class="fee-item">
+                                    <p class="fee-item__content">
+                                        Feeding organic food
+                                    </p>
+                                </li>
+                                <li class="fee-item">
+                                    <p class="fee-item__content">
+                                        Dog waste pick up
+                                    </p>
+                                </li>
+                                <li class="fee-item">
+                                    <p class="fee-item__content">
+                                        40-50 minute walk or play time
+                                    </p>
+                                </li>
+                                <li class="fee-item">
+                                    <p class="fee-item__content">
+                                        Medication administration
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <a class="fee__btn" href="#">View fee</a>
+            </div>
+        </section>
+        <!-- testimonial -->
+        <section class="heading-text">
+            <article class="heading-text-container" data-scroll>
+                <h2 class="heading-text__title">What other
+                    say about us?</h2>
+                <p class="heading-text__intro">Meet various users who have used Doggy.</p>
+            </article>
+        </section>
+        <section class="testimonial">
+            <div class="swiper testimonial-swiper">
+                <div class="testimonial-swiper-wrapper swiper-wrapper">
+                    <div class="testimonial-swiper-slide swiper-slide">
+                        <div class="testimonial-swiper-slide__stars"><i class="fas fa-solid fa-star"></i><i
+                                class="fas fa-solid fa-star"></i><i class="fas fa-solid fa-star"></i><i
+                                class="fas fa-solid fa-star"></i><i class="fas fa-solid fa-star"></i></div>
+                        <p class="testimonial-swiper-slide__comment">
+                            I'm so pleased to see my dog healthy and
+                            lively! Thanks to the convenient services like walks, customized meals, and regular
+                            clean-ups.
+                        </p>
+                        <div class="testimonial-swiper-slide__user">
+                            <img src="./asset/images/doggy-user01.jpg" alt="user" />
+                            <span class="testimonial-swiper-slide__username">Olivia Bennett</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-swiper-slide swiper-slide">
+                        <div class="testimonial-swiper-slide__stars"><i class="fas fa-solid fa-star"></i><i
+                                class="fas fa-solid fa-star"></i><i class="fas fa-solid fa-star"></i><i
+                                class="fas fa-solid fa-star"></i><i class="fas fa-solid fa-star"></i></div>
+                        <p class="testimonial-swiper-slide__comment">
+                            Thanks to
+                            Doggy, that burden has significantly decreased. Thank you for providing such excellent
+                            service for my dog!
+                        </p>
+                        <div class="testimonial-swiper-slide__user">
+                            <img src="./asset/images/doggy-user02.jpg" alt="user" />
+                            <span class="testimonial-swiper-slide__username">Ethan Reynolds</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-swiper-slide swiper-slide">
+                        <div class="testimonial-swiper-slide__stars"><i class="fas fa-solid fa-star"></i><i
+                                class="fas fa-solid fa-star"></i><i class="fas fa-solid fa-star"></i><i
+                                class="fas fa-solid fa-star"></i><i class="fas fa-solid fa-star"></i></div>
+                        <p class="testimonial-swiper-slide__comment">
+                            The health report feature of Doggy is really useful. Being able to monitor my dog's activity
+                            level and meal content in real-time gives me peace of mind.
+                        </p>
+                        <div class="testimonial-swiper-slide__user">
+                            <img src="./asset/images/doggy-user03.jpg" alt="user" />
+                            <span class="testimonial-swiper-slide__username">Ava Mitchell
+                            </span>
+                        </div>
+                    </div>
+                    <div class="testimonial-swiper-slide swiper-slide">
+                        <div class="testimonial-swiper-slide__stars"><i class="fas fa-solid fa-star"></i><i
+                                class="fas fa-solid fa-star"></i><i class="fas fa-solid fa-star"></i><i
+                                class="fas fa-solid fa-star"></i><i class="fas fa-solid fa-star"></i></div>
+                        <p class="testimonial-swiper-slide__comment">
+                            The Doggy team always responds promptly and kindly. Their willingness to help with any
+                            inquiries or requests was greatly appreciated.
+                        </p>
+                        <div class="testimonial-swiper-slide__user">
+                            <img src="./asset/images/doggy-user04.jpg" alt="user" />
+                            <span class="testimonial-swiper-slide__username">Emily White</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-swiper-slide swiper-slide">
+                        <div class="testimonial-swiper-slide__stars"><i class="fas fa-solid fa-star"></i><i
+                                class="fas fa-solid fa-star"></i><i class="fas fa-solid fa-star"></i><i
+                                class="fas fa-solid fa-star"></i><i class="fas fa-solid fa-star"></i></div>
+                        <p class="testimonial-swiper-slide__comment">
+                            I used to worry about my dog's health and safety. With regular walks and customized meals,
+                            my dog is growing up healthy.
+                        </p>
+                        <div class="testimonial-swiper-slide__user">
+                            <img src="./asset/images/doggy-user05.jpg" alt="user" />
+                            <span class="testimonial-swiper-slide__username">Jessica Taylor</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-swiper-slide swiper-slide">
+                        <div class="testimonial-swiper-slide__stars"><i class="fas fa-solid fa-star"></i><i
+                                class="fas fa-solid fa-star"></i><i class="fas fa-solid fa-star"></i><i
+                                class="fas fa-solid fa-star"></i><i class="fas fa-solid fa-star"></i></div>
+                        <p class="testimonial-swiper-slide__comment">
+                            I find Doggy's service highly reliable. It feels like they treat my dog like family, which I
+                            really appreciate. Highly recommended!
+                        </p>
+                        <div class="testimonial-swiper-slide__user">
+                            <img src="./asset/images/doggy-user06.jpg" alt="user" />
+                            <span class="testimonial-swiper-slide__username">John Smith</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- faq -->
+        <section class="heading-text heading--faq">
+            <article class="heading-text-container" data-scroll>
+                <h2 class="heading-text__title">Here are frequently asked questions</h2>
+                <p class="heading-text__intro">We would like to help you.</p>
+            </article>
+        </section>
+        <section class="faq">
+            <ul class="faq-accordion">
+                <li class="faq-accordion-item">
+                    <div class="faq-accordion-item__header">
+                        <h4 class="faq-accordion-item__question">How does the Doggy service operate?</h4>
+                    </div>
+                    <div class="faq-accordion-item__content">
+                        <p class="faq-accordion-item__answer">Doggy opefee through a dedicated app, allowing owners to
+                            schedule
+                            services such as walks, customized meals, and waste removal at desired times and
+                            frequencies.
+                            Owners can monitor Doggy's activities in real-time through the app.</p>
+                    </div>
+                </li>
+                <li class="faq-accordion-item">
+                    <div class="faq-accordion-item__header">
+                        <h4 class="faq-accordion-item__question">How does Doggy handle special dietary requirements for
+                            my dog?</h4>
+                    </div>
+                    <div class="faq-accordion-item__content">
+                        <p class="faq-accordion-item__answer">Doggy considers any special dietary requirements provided
+                            by the
+                            owner, offering personalized meals based on the dog's health status and dietary preferences.
+                            Owners can set health conditions and meal preferences on the app for optimal meal
+                            suggestions.</p>
+                    </div>
+                </li>
+                <li class="faq-accordion-item">
+                    <div class="faq-accordion-item__header">
+                        <h4 class="faq-accordion-item__question">What does Doggy provide to the dog during walks?</h4>
+                    </div>
+                    <div class="faq-accordion-item__content">
+                        <p class="faq-accordion-item__answer">During walks, Doggy not only ensures a safe walking
+                            experience but
+                            also provides water and snacks afterward to help the dog recover.</p>
+                    </div>
+                </li>
+                <li class="faq-accordion-item">
+                    <div class="faq-accordion-item__header">
+                        <h4 class="faq-accordion-item__question">How does Doggy manage the health of the dog?
+                        </h4>
+                    </div>
+                    <div class="faq-accordion-item__content">
+                        <p class="faq-accordion-item__answer">Doggy collects data on the dog's activity levels, food
+                            consumption,
+                            and bathroom habits. It regularly provides owners with health reports based on this data. If
+                            any issues are detected, the owner is promptly notified.</p>
+                    </div>
+                </li>
+                <li class="faq-accordion-item">
+                    <div class="faq-accordion-item__header">
+                        <h4 class="faq-accordion-item__question">What should I do if issues arise during the use of
+                            Doggy's
+                            services?</h4>
+                    </div>
+                    <div class="faq-accordion-item__content">
+                        <p class="faq-accordion-item__answer">Doggy offers 24/7 customer support. Owners can report
+                            problems within
+                            the app or contact customer service via phone or email. Our team is ready to provide
+                            assistance promptly.</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="faq-contact">
+                <p class="faq-contact-text">Have a question?</p>
+                <p class="faq-contact-btn">
+                    <a href="#" class="faq-contact-btn__link">Contact us</a>
+                </p>
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-grid">
+                <div class="footer-grid__img">
+                    <img src="./asset/images/doggy-logo.png" alt="Logo" />
+                </div>
+                <div class="footer-grid-columns">
+                    <div class="footer-grid-column">
+                        <h4 class="footer-grid-column__title">About</h4>
+                        <ul class="footer-grid-column-list">
+                            <li class="footer-grid-item">
+                                <span class="footer-grid-item__link-wrapper link-wrapper">
+                                    <a class="footer-grid-item__link link" href="#">About Us</a>
+                                </span>
+                            </li>
+                            <li class="footer-grid-item">
+                                <span class="footer-grid-item__link-wrapper link-wrapper">
+                                    <a class="footer-grid-item__link link" href="#">Our Team</a>
+                                </span>
+                            </li>
+                            <li class="footer-grid-item">
+                                <span class="footer-grid-item__link-wrapper link-wrapper">
+                                    <a class="footer-grid-item__link link" href="#">Contact Us</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-grid-column">
+                        <h4 class="footer-grid-column__title">Help</h4>
+                        <ul class="footer-grid-column-list">
+                            <li class="footer-grid-item">
+                                <span class="footer-grid-item__link-wrapper link-wrapper">
+                                    <a class="footer-grid-item__link link" href="#">Notice</a>
+                                </span>
+                            </li>
+                            <li class="footer-grid-item">
+                                <span class="footer-grid-item__link-wrapper link-wrapper">
+                                    <a class="footer-grid-item__link link" href="#">FAQ</a>
+                                </span>
+                            </li>
+                            <li class="footer-grid-item">
+                                <span class="footer-grid-item__link-wrapper link-wrapper">
+                                    <a class="footer-grid-item__link link" href="#">Plan</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-grid-column">
+                        <h4 class="footer-grid-column__title">Follow</h4>
+                        <ul class="footer-grid-column-list">
+                            <li class="footer-grid-item">
+                                <span class="footer-grid-item__link-wrapper link-wrapper">
+                                    <a class="footer-grid-item__link link" href="#">Facebook</a>
+                                </span>
+                            </li>
+                            <li class="footer-grid-item">
+                                <span class="footer-grid-item__link-wrapper link-wrapper">
+                                    <a class="footer-grid-item__link link" href="#">Instagram</a>
+                                </span>
+                            </li>
+                            <li class="footer-grid-item">
+                                <span class="footer-grid-item__link-wrapper link-wrapper">
+                                    <a class="footer-grid-item__link link" href="#">Twitter</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-grid-column">
+                        <h4 class="footer-grid-column__title">Booking</h4>
+                        <p class="footer-grid-column__desc">Request consultation.</p>
+                        <form class="footer-grid-form">
+                            <div class="footer-grid-form-container">
+                                <input class="footer-grid-form__input" type="email" placeholder="Email" required />
+                                <button class="footer-grid-form__btn" type="submit"><i
+                                        class="fas fa-solid fa-envelope"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer__copyrights">© <span class="footer__year">2024</span> Doggy, All Rights Reserved</p>
+        </div>
+    </footer>
+    <!-- sidebar -->
+    <div class="side side--close">
+        <button type="button" class="side-close-btn">
+            <div class="close-btn__bar bar--left"></div>
+            <div class="close-btn__bar bar--right"></div>
+        </button>
+        <div class="side-inner">
+            <div class="side-text">
+                <h3 class="side-text__title">The best way to care for your dog.</h3>
+                <p class="side-text__desc">12% discount when booking from the website.</p>
+                <a href="#" class="side-text__btn">
+                    Book now
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- scroll to top -->
+    <button type="button" class="scroll-to-top-btn">
+        <span class="scroll-to-top__icon">
+            <svg data-name="1-Arrow Up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                <path d="m26.71 10.29-10-10a1 1 0 0 0-1.41 0l-10 10 1.41 1.41L15 3.41V32h2V3.41l8.29 8.29z" />
+            </svg>
+        </span>
+    </button>
+    <!-- cursor -->
+    <div class="cursor">
+        <span class="cursor__circle">
+            <i class="fas fa-solid fa-chevron-left"></i>
+            <i class="fas fa-solid fa-chevron-right"></i>
+        </span>
+    </div>
+</body>
+
+</html>
