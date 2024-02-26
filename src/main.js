@@ -20,7 +20,7 @@ const mainSlideTextWrapperItems = mainSlide.querySelectorAll(
 
 // scroll-to-top 나타나기
 document.addEventListener('scroll', () => {
-  if (window.scrollY < mainSlideHeight / 3) {
+  if (window.scrollY < mainSlideHeight) {
     scrollToTopBtn.classList.remove('scroll-btn--visible');
   } else {
     scrollToTopBtn.classList.add('scroll-btn--visible');
