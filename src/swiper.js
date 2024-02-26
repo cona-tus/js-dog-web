@@ -62,7 +62,7 @@ const testimonialSwiper = new Swiper('.testimonial-swiper', {
       spaceBetween: 30,
     },
     1440: {
-      slidesPerView: 5,
+      slidesPerView: 3,
       spaceBetween: 50,
     },
   },
