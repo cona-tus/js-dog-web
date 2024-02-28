@@ -34,18 +34,18 @@ Doggy는 강아지 케어 서비스를 컨셉으로 한 싱글페이지 웹사�
 
 ## 3. Main Features
 
-1. [드롭다운 메뉴](#3-1-handle-local-storage-data)
-2. [모바일 전체화면 모드](#3-2-create-a-new-task)
-3. [본문으로 건너뛰기 메뉴](#3-3-render-tasks)
-4. [슬라이드쇼 애니메이션](#3-4-update-task)
-5. [스크롤 애니메이션](#3-5-remove-tasks)
-6. [스크롤 최상단 이동](#3-6-sort-tasks)
-7. [커서 변경](#3-7-speech-to-text-using-web-speech-api)
-8. [아코디언 메뉴](#3-7-speech-to-text-using-web-speech-api)
-9. [마우스 오버 효과](#3-7-speech-to-text-using-web-speech-api)
-10. [Grid 및 Flex 레이아웃](#3-7-speech-to-text-using-web-speech-api)
-11. [Position 요소](#3-7-speech-to-text-using-web-speech-api)
-12. [반응형 웹디자인](#3-7-speech-to-text-using-web-speech-api)
+1. [드롭다운 메뉴](#3-1-header-dropdown-menu)
+2. [모바일 전체화면 모드](#3-2-mobile-header--full-screen-mode)
+3. [본문으로 건너뛰기 메뉴](#3-3-skip-menu)
+4. [슬라이드쇼 애니메이션](#3-4-slideshow-with-animation)
+5. [스크롤 애니메이션](#3-5-scroll-animation)
+6. [스크롤 최상단 이동](#3-6-scroll-to-top)
+7. [커서 변경](#3-7-change-cursor)
+8. [아코디언 메뉴](#3-8-accordion-menu)
+9. [마우스 오버 효과](#3-9-hover-line-effect)
+10. [Grid 및 Flex 레이아웃](#3-10-grid--flex-layout)
+11. [Position 요소](#3-11-positioned-element)
+12. [반응형 웹디자인](#3-12-responsive-web-design)
 
 <br/>
 
@@ -1048,4 +1048,4 @@ landscape 모드가 되면 `slideshow-swiper-slide-text`의 크기를 줄여서 
 <br/>
 <br/>
 
-[맨위로 이동하기]()
+[맨위로 이동하기](#-강아지-케어-서비스-웹사이트-doggy-프로젝트)
